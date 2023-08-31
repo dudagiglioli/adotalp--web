@@ -1,16 +1,30 @@
 .toolbar{
-  background-color: #2D7BF6;
+  background-color: #2d7bf6;
   display: flex;
-  justify-content: center;
+  box-sizing: border-box;
   height: 80px;
-  padding: 0 2rem;
-
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px;
 }
-.nav{
 
+.start{
+  width: 50%;
 }
-.title{
 
-   
+.middle{
+  width: 50%;
+  font-family: 'Work Sans', sans-serif;
+  align-self: center;
 }
-  
+
+.end{
+  width: 50%;
+}
+
+.logo{
+width: 50%;
+height: 100%;
+max-width: 70px;
+min-width: 50px;
+}
