@@ -10,20 +10,31 @@
 
 .start{
   width: 50%;
+  margin-left: 10%;
 }
 
 .middle{
   width: 50%;
-  font-family: 'Work Sans', sans-serif;
   align-self: center;
+  justify-content: center;
+  display: flex;
 
   &__text{
-    color:#fbf1d3
-  }
+    color:#fbf1d3;
+    font-weight: bold;
+  
+    }
 }
 
 .end{
   width: 50%;
+  margin-right: 10%;
+  align-self: center;
+  justify-content: center;
+  display: flex;
+   padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
 }
 
 .logo{
@@ -32,3 +43,4 @@ height: 100%;
 max-width: 70px;
 min-width: 50px;
 }
+

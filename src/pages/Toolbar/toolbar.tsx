@@ -10,11 +10,13 @@ export default function Toolbar() {
      </div>
 
      <div className={styles.middle}>
-       teste
+       <div className={styles.middle__text}>ADOTA LP</div>
      </div>
 
      <div className={styles.end}>
-       dlsd
+      <input type="search" name="pesquisa" placeholder="Ache seu companheiro!">
+    
+      </input>
      </div>
    </header>
  )
