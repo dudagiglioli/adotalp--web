@@ -14,9 +14,13 @@ export default function Toolbar() {
      </div>
 
      <div className={styles.end}>
-      <input type="search" name="pesquisa" placeholder="Ache seu companheiro!">
-    
-      </input>
+
+       <div className={styles.end__inputBox}>
+
+       <input type="search" name="pesquisa" placeholder="Ache seu companheiro!" className={styles.end__inputBox__input}></input>
+
+       </div>
+      
      </div>
    </header>
  )

@@ -32,9 +32,19 @@
   align-self: center;
   justify-content: center;
   display: flex;
-   padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
+
+  &__inputBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    &__input{
+      width: 100%;
+    }
+
+  }
+
+ 
 }
 
 .logo{
