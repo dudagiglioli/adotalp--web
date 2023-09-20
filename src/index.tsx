@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
+import Cadastro from './pages/Cadastro/cadastro';
 import Toolbar from './pages/Toolbar/toolbar';
 
 const root = ReactDOM.createRoot(
@@ -8,8 +9,7 @@ const root = ReactDOM.createRoot(
 );
 root.render(
   <React.StrictMode>
-    <Toolbar/>
-
+    <Cadastro/>
   </React.StrictMode>
 );
 

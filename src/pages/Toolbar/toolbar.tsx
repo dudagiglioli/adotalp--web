@@ -11,17 +11,15 @@ export default function Toolbar() {
      </div>
 
      <div className={styles.middle}>
-      
+    
      </div>
 
      <div className={styles.end}>
-      <div className={styles.end__searchBox}>
-        <button className={styles.end__searchButton}>
-        <BiSearch className={styles.end__searchIcon} size={25}/>
-        <h3 className={styles.end__searchTitle}>Pesquisa</h3>
+     <div className={styles.end__searchBox}>
+        <button className={styles.end__searchBox__searchButton}>
+        <BiSearch className={styles.end__searchBox__searchIcon} size={30}/>
         </button>
       </div>
-      
      </div>
    </header>
  )
