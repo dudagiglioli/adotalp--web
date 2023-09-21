@@ -1,81 +1,92 @@
 import styles from "./Cadastro.module.scss"
+import test from "../../assets/teste.png"
 
 export default function Cadastro(){
 
     return (
-        <div className={styles.container}>
-            <div className={styles.firstContent}>
-
-                <div className={styles.firstColumn}>
-                    <h2 className={styles.firstColumn__title}> Obrigado por Voltar!</h2>
-                    <p className={styles.firstColumn__description}> Continue coom a gente</p>
-                    <p className={styles.firstColumn__description}> logue com sua conta pessoal</p>
-                    <button className={styles.firstColumn__btn}> login </button>
+        <body className={styles.back}>
+            <div className={styles.container}>
+                <div className={styles.formImage}>
+                    <img src={test} alt="ll" className={styles.img}/>
                 </div>
-                {/* first column */}
+                <div className={styles.form}>
+                    <form action="#">
+                        <div className={styles.formHeader}>
+                        <div className={styles.title}>
+                            <h1>cadastre-se</h1>
+                        </div>
+                        <div className={styles.loginButton}>
+                            <button>entrar</button>
+                        </div>
+                        </div>
+                        
+                        <div className={styles.inputGroup}>
+                            <label htmlFor="firstname"> Primeiro nome </label>
+                            <input id="firstname" typeof="text" name="firstname" placeholder="Digite seu primeiro nome" required></input>
+                        </div>
 
-                <div className={styles.secondColumn}>
-                    <h2 className={styles.secondColumn__title}> crie sua conta </h2>
+                        <div className={styles.inputGroup}>
+                            <label htmlFor="lastname"> Sobrenome </label>
+                            <input id="lastname" typeof="text" name="lastname" placeholder="Digite seu sobrenome" required></input>
+                        </div>
 
-                    <div className={styles.secondColumn__socialMedia}>
-                        <ul className={styles.secondColumn__socialMedia__list}>
-                            <li>  facebook </li>
-                            <li>  google+  </li>
-                            <li>  linkedin </li>
-                        </ul>
-                    </div>
+                        <div className={styles.inputGroup}>
+                            <label htmlFor="email"> Email </label>
+                            <input id="email" typeof="email" name="email" placeholder="Digite seu email" required></input>
+                        </div>
 
-                    <p className={styles.secondColumn__description}> ou use seu e-mail para se registrar: </p>
+                        <div className={styles.inputGroup}>
+                            <label htmlFor="number"> Telefone </label>
+                            <input id="number" typeof="tel" name="number" placeholder="(xx) xxxxx-xxxx" required></input>
+                        </div>
 
-                    <form className={styles.form}> 
-                        <input type="text" placeholder="Nome"/>
-                        <input type="email" placeholder="Email"/>
-                        <input type="password" placeholder="Senha"/>
-                        <button className={styles.form__btn}> cadastro </button>
+                        <div className={styles.inputGroup}>
+                            <label htmlFor="password"> Senha </label>
+                            <input id="password" typeof="password" name="password" placeholder="Digite sua senha" required></input>
+                        </div>
+
+                        <div className={styles.inputGroup}>
+                            <label htmlFor="Confirmpassword"> Confirme sua senha </label>
+                            <input id="Confirmpassword" typeof="password" name="password" placeholder="Confirme sua senha" required></input>
+                        </div>
+
+
+                        <div className={styles.genderInputs}>
+                            <div className={styles.genderTitle}>
+                                <h6>Gênero</h6>
+                            </div>
+
+                            <div className={styles.genderInput}>
+                                <input type="radio" id="female" name="gender"/>
+                                <label htmlFor="female">Feminino</label>
+                            </div>
+                            
+                            <div className={styles.genderInput}>
+                                <input type="radio" id="male" name="gender"/>
+                                <label htmlFor="male">Masculino</label>
+                            </div>
+
+                            <div className={styles.genderInput}>
+                                <input type="radio" id="others" name="gender"/>
+                                <label htmlFor="others">Outro</label>
+                            </div>
+
+                            <div className={styles.genderInput}>
+                                <input type="radio" id="none" name="gender"/>
+                                <label htmlFor="none">Prefiro não dizer</label>
+                            </div>
+
+                            <div className={styles.continueButton}>
+                                <button>Continuar</button>
+                            </div>
+                        </div>    
                     </form>
                 </div>
             </div>
+          
 
-            {/* First content ------------------------------------------------------------------------------------------------------ */}
 
-        <div className={styles.secondContent}>
-            <div className={styles.firstColumn}>
-                    <h2 className={styles.firstColumn__title}> Bem-Vindo! </h2>
-                    <p className={styles.firstColumn__description}> Crie sua conta pessoal </p>
-                    <p className={styles.firstColumn__description}> e adote seu pet com a gente</p>
-                    <button className={styles.firstColumn__btn}> cadastro </button>
-            </div>
-                {/* first column */}
-
-                <div className={styles.secondColumn}>
-                    <h2 className={styles.secondColumn__title}> Entre com sua conta </h2>
-
-                    <div className={styles.secondColumn__socialMedia}>
-                        <ul>
-                            <li>  facebook </li>
-                            <li>  google+  </li>
-                            <li>  linkedin </li>
-                        </ul>
-                    </div>
-
-                    <p className={styles.secondColumn__description}> ou use seu e-mail para entrar: </p>
-
-                    <form className={styles.form}> 
-                        <input type="email" placeholder="Email"/>
-                        <input type="password" placeholder="Senha"/>
-                        <button>esquceu sua senha?</button>
-                        <button className={styles.form__btn}> login </button>
-                    </form>
-                </div>
-             </div>
-              {/* Second content ------------------------------------------------------------------------------------------------------ */}
-
-        </div>
-        
+        </body>
     )
 
 }
-
-// https://www.youtube.com/watch?v=NbMb0QPr2Iw&list=PLARhMvcrqcLy3bU1RxbkC7GYH7eHgXI0A&index=2 13:30
-
-// colocar content e first content
