@@ -120,10 +120,11 @@ export default function Cadastro() {
                   <label htmlFor="none" className={styles.genderInput__label}>Prefiro não dizer</label>
                 </div>
 
-                <div className={styles.continueButton}>
+               
+              </div>
+              <div className={styles.continueButton}>
                   <button className={styles.continueButton__btn}>Continuar</button>
                 </div>
-              </div>
             </div>
           </form>
         </div>
