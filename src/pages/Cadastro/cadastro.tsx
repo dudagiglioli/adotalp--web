@@ -1,22 +1,24 @@
 import styles from "./Cadastro.module.scss";
-import test from "../../assets/teste.png";
+import cat from "../../assets/Cat.png"
 
 export default function Cadastro() {
   return (
     <body className={styles.back}>
       <div className={styles.container}>
         <div className={styles.formImage}>
-          <img src={test} alt="ll" className={styles.img} />
+          <img src={cat} alt="ll" className={styles.img} />
         </div>
 
         <div className={styles.form}>
           <form action="#">
             <div className={styles.formHeader}>
               <div className={styles.title}>
-                <h1 className={styles.h1}>cadastre-se</h1>
+                <h1 className={styles.h1}>Crie sua conta!</h1>
               </div>
               <div className={styles.loginButton}>
-                <button className={styles.loginButton__button}>entrar</button>
+                <button className={styles.loginButton__button}>
+                  <h1  className={styles.loginButton__h1}> ENTRAR </h1>
+                  </button>
               </div>
             </div>
 
@@ -123,7 +125,7 @@ export default function Cadastro() {
                
               </div>
               <div className={styles.continueButton}>
-                  <button className={styles.continueButton__btn}>Continuar</button>
+                  <button className={styles.continueButton__btn}>CONTINUE</button>
                 </div>
             </div>
           </form>
