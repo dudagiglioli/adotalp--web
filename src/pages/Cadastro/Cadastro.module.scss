@@ -1,0 +1,183 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+   }
+   .back{
+       width: 100%;
+       height: 100vh;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       background-color: #b6d2ff;
+   }
+   .container{
+       width: 80%;
+       height: 80vh;
+       display: flex; 
+       box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+   }
+   .formImage{
+       width: 50%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 1rem;
+       background-color: white;
+   }
+   .img{
+       width: 31rem;
+   }
+   .form{
+       width: 50%;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+       background-color: white;
+       padding: 3rem;
+   }
+   .formHeader{
+       margin-bottom: 3rem;
+       display: flex;
+       justify-content: space-between;
+   }
+   
+   .loginButton{ 
+       display: flex;
+       align-items: center;
+   
+       &__button{
+           border: none;
+           background-color: #2d7bf6;
+           padding: 0.4rem 1rem;
+           border-radius: 5px;
+           cursor: pointer;
+       }
+       &__button:hover {
+           background-color: #2d5bf0;
+       }      
+   
+   }
+   .h1::after {
+       content: '';
+       display: block;
+       width: 5rem;
+       height: 0.3rem;
+       background-color: #2d7bf6;
+       margin: 0 auto;
+       position: absolute;
+       border-radius: 10px;
+   }
+   .inputGroup {
+       display: flex;
+       flex-wrap: wrap;
+       justify-content: space-between;
+       padding: 1rem 0;
+   }
+   .inputBox{
+       display: flex;
+       flex-direction: column;
+       margin-bottom: 1.1rem;
+   
+       &__input{
+           margin: 0.0rem 0;
+           padding: 0.8rem 1.2rem;
+           border: none;
+           border-radius: 10px;
+           box-shadow: 1px 1px 6px #0000001c;
+       }
+       &__input:hover{
+           background-color: rgb(236, 234, 234);
+       }
+       &__input:focus-visible{
+           outline: 1px solid #2d7bf6;
+       }
+       &__input::placeholder{
+           color: #000000be;
+       }
+   
+   
+       &__label{
+           font-size: 0.75rem;
+           font-weight: 600;
+           color: #000000c0;
+       }
+   }
+   
+   .genderGroup{
+       display: flex;
+       justify-content: center;
+       margin-top: 0.62rem;
+       padding: 0 0.5rem;
+   }
+   
+   .genderInput{
+       display: flex;
+       align-items: center;
+       &__input{
+           margin-right: 0.35rem;
+       }
+       &__label{
+           font-size: 0.81rem;
+           font-weight: 600;
+           color: #000000c0;
+       }
+   }
+   .genderTitle{
+       &__h6{
+           font-size: 0.75rem;
+           font-weight: 600;
+           color: #000000c0;
+       }
+   }
+   .continueButton{
+   
+       &__btn{
+           width: 100%;
+           margin-top: 2.5rem;
+           border: none;
+           background-color: #4189fc;
+           padding: 0.62rem;
+           border-radius: 5px;
+           cursor: pointer;
+       }
+       &__btn:hover{
+           background-color: #b6d2ff;
+       }
+   }
+   @media screen and (max-width: 1330px){
+       .formImage{
+           display: none;
+       }
+       .container{
+           width: 50%;
+       }
+       .form{
+           width: 100%;
+       }
+   }
+   @media screen and (max-width: 1064px) {
+       .container{
+           width: 90%;
+           height: auto;
+       }
+       .inputGroup{
+           flex-direction: column;
+           overflow-y: scroll;
+           flex-wrap: nowrap;
+           max-height: 10rem;
+           padding-right: 5rem;
+       }
+       .genderInputs{
+           margin-top: 2rem;
+       }
+       .genderGroup{flex-direction: column;}
+       .genderInput{margin-top: 0.5rem;}
+   }
+   
+   
+   
+   
+   
+   // https://www.youtube.com/watch?v=zWw0npNDkVM 13:3
