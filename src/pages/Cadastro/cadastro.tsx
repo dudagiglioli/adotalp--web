@@ -1,5 +1,19 @@
 import styles from "./Cadastro.module.scss";
 import cat from "../../assets/Cat.png"
+import * as yup from "yup";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+
+const validationSchema = yup.object({
+  email: yup
+  .string()
+  .email("Entre com um email válido")
+  .required("Email válido"),
+
+  password: yup
+  .string()
+  .min(8, "Password minimum 8 characters")
+  .required("Password is required")
+})
 
 export default function Cadastro() {
   return (
@@ -47,6 +61,7 @@ export default function Cadastro() {
                 ></input>
               </div>
 
+              
               <div className={styles.inputBox}>
                 <label htmlFor="email" className={styles.inputBox__label}> Email </label>
                 <input
