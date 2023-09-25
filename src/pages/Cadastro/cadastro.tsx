@@ -1,6 +1,5 @@
 import styles from "./Cadastro.module.scss";
 import cat from "../../assets/Cat.png"
-import MaskedInput from "./MaskedInput"
 
 export default function Cadastro() {
   return (
@@ -24,12 +23,16 @@ export default function Cadastro() {
               </div>
             </div>
 
+            <div>
+              
+            </div>
+
             <div className={styles.inputGroup}>
               <div className={styles.inputBox}>
                 <label htmlFor="firstname" className={styles.inputBox__label}> Nome </label>
                 <input
                   id="nome"
-                  typeof="text"
+                  type="text"
                   name="nome"
                   placeholder="Digite seu nome"
                   required
@@ -38,15 +41,22 @@ export default function Cadastro() {
               </div>
 
               <div className={styles.inputBox}>
-                <label htmlFor="lastname" className={styles.inputBox__label}> Cpf </label>
-                <MaskedInput/>
+                <label htmlFor="cpf" className={styles.inputBox__label}> Cpf </label>
+                <input
+                  id="cpf"
+                  type=""
+                  name="cpf"
+                  placeholder="Digite seu cpf"
+                  required
+                  className={styles.inputBox__input}
+                ></input>
               </div>
 
               <div className={styles.inputBox}>
                 <label htmlFor="email" className={styles.inputBox__label}> Email </label>
                 <input
                   id="email"
-                  typeof="email"
+                  type="email"
                   name="email"
                   placeholder="Digite seu email"
                   required
@@ -58,7 +68,8 @@ export default function Cadastro() {
                 <label htmlFor="number" className={styles.inputBox__label}> Telefone </label>
                 <input
                   id="number"
-                  typeof="tel"
+                  type="tel"
+                  pattern="[0-9]{2"
                   name="number"
                   placeholder="(xx) xxxxx-xxxx"
                   required
@@ -70,7 +81,7 @@ export default function Cadastro() {
                 <label htmlFor="password" className={styles.inputBox__label}> Senha </label>
                 <input
                   id="password"
-                  typeof="password"
+                  type="password"
                   name="password"
                   placeholder="Digite sua senha"
                   required
@@ -82,47 +93,20 @@ export default function Cadastro() {
                 <label htmlFor="Confirmpassword" className={styles.inputBox__label}> Confirme sua senha </label>
                 <input
                   id="Confirmpassword"
-                  typeof="password"
+                  type="password"
                   name="password"
                   placeholder="Confirme sua senha"
                   required
                   className={styles.inputBox__input}
                 ></input>
               </div>
+
+              
+            </div>           
+            <div className={styles.continueButton}>
+                <button className={styles.continueButton__btn}>CONTINUE</button>
             </div>
 
-            <div className={styles.genderInputs}>
-              <div className={styles.genderTitle}>
-                <h6 className={styles.genderTitle__h6}>Gênero</h6>
-              </div>
-
-              <div className={styles.genderGroup}>
-                <div className={styles.genderInput}>
-                  <input type="radio" id="female" name="gender" className={styles.genderInput__input}/>
-                  <label htmlFor="female" className={styles.genderInput__label}>Feminino</label>
-                </div>
-
-                <div className={styles.genderInput}>
-                  <input type="radio" id="male" name="gender" className={styles.genderInput__input}/>
-                  <label htmlFor="male" className={styles.genderInput__label}>Masculino</label>
-                </div>
-
-                <div className={styles.genderInput}>
-                  <input type="radio" id="others" name="gender" className={styles.genderInput__input}/>
-                  <label htmlFor="others" className={styles.genderInput__label}>Outro</label>
-                </div>
-
-                <div className={styles.genderInput}>
-                  <input type="radio" id="none" name="gender" className={styles.genderInput__input}/>
-                  <label htmlFor="none" className={styles.genderInput__label}>Prefiro não dizer</label>
-                </div>
-
-               
-              </div>
-              <div className={styles.continueButton}>
-                  <button className={styles.continueButton__btn}>CONTINUE</button>
-                </div>
-            </div>
           </form>
         </div>
       </div>

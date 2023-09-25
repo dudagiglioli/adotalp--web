@@ -167,7 +167,8 @@
         cursor: pointer;
         color: aliceblue;
         font-weight: 900;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
     }
     &__btn:hover{
         background-color: aliceblue;
@@ -200,15 +201,5 @@
         max-height: 10rem;
         padding-right: 5rem;
     }
-    .genderInputs{
-        margin-top: 2rem;
-    }
-    .genderGroup{flex-direction: column;}
-    .genderInput{margin-top: 0.5rem;}
+
 }
-
-
-
-
-
-// https://www.youtube.com/watch?v=zWw0npNDkVM 13:3
