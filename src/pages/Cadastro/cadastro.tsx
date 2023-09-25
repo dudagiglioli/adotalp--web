@@ -1,8 +1,10 @@
 import styles from "./Cadastro.module.scss";
 import cat from "../../assets/Cat.png"
+import MaskedInput from "./MaskedInput"
 
 export default function Cadastro() {
   return (
+
     <body className={styles.back}>
       <div className={styles.container}>
         <div className={styles.formImage}>
@@ -13,7 +15,7 @@ export default function Cadastro() {
           <form action="#">
             <div className={styles.formHeader}>
               <div className={styles.title}>
-                <h1 className={styles.h1}>Crie sua conta!</h1>
+                <h1 className={styles.h1}>BEM-VINDO!</h1>
               </div>
               <div className={styles.loginButton}>
                 <button className={styles.loginButton__button}>
@@ -24,27 +26,20 @@ export default function Cadastro() {
 
             <div className={styles.inputGroup}>
               <div className={styles.inputBox}>
-                <label htmlFor="firstname" className={styles.inputBox__label}> Primeiro nome </label>
+                <label htmlFor="firstname" className={styles.inputBox__label}> Nome </label>
                 <input
-                  id="firstname"
+                  id="nome"
                   typeof="text"
-                  name="firstname"
-                  placeholder="Digite seu primeiro nome"
+                  name="nome"
+                  placeholder="Digite seu nome"
                   required
                   className={styles.inputBox__input}
                 ></input>
               </div>
 
               <div className={styles.inputBox}>
-                <label htmlFor="lastname" className={styles.inputBox__label}> Sobrenome </label>
-                <input
-                  id="lastname"
-                  typeof="text"
-                  name="lastname"
-                  placeholder="Digite seu sobrenome"
-                  required
-                  className={styles.inputBox__input}
-                ></input>
+                <label htmlFor="lastname" className={styles.inputBox__label}> Cpf </label>
+                <MaskedInput/>
               </div>
 
               <div className={styles.inputBox}>
