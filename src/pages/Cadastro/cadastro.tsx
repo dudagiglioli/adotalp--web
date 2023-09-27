@@ -1,22 +1,36 @@
 import styles from "./Cadastro.module.scss";
-import cat from "../../assets/Cat.png"
+import cat from "../../assets/Cat.png";
 import * as yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
-const validationSchema = yup.object({
-  email: yup
-  .string()
-  .email("Entre com um email válido")
-  .required("Email válido"),
 
-  password: yup
-  .string()
-  .min(8, "Password minimum 8 characters")
-  .required("Password is required")
-})
+function YourComponent() {
+  const initialValues = {
+    email: '',
+    password: '',
+  };
+
+  const validationSchema = yup.object({
+    email: yup
+      .string()
+      .email("Entre com um email válido")
+      .required("Email válido"),
+  
+    password: yup
+      .string()
+      .min(8, "Password minimum 8 characters")
+      .required("Password is required"),
+  });
+
+  const handleSubmit = (values: any) => {
+    console.log(values);
+  };
+
+
 
 export default function Cadastro() {
   return (
+    <main>
     <body className={styles.back}>
       <div className={styles.container}>
         <div className={styles.formImage}>
@@ -31,14 +45,17 @@ export default function Cadastro() {
               </div>
               <div className={styles.loginButton}>
                 <button className={styles.loginButton__button}>
-                  <h1  className={styles.loginButton__h1}> ENTRAR </h1>
-                  </button>
+                  <h1 className={styles.loginButton__h1}> ENTRAR </h1>
+                </button>
               </div>
             </div>
 
             <div className={styles.inputGroup}>
               <div className={styles.inputBox}>
-                <label htmlFor="firstname" className={styles.inputBox__label}> Primeiro nome </label>
+                <label htmlFor="firstname" className={styles.inputBox__label}>
+                  {" "}
+                  Primeiro nome{" "}
+                </label>
                 <input
                   id="firstname"
                   typeof="text"
@@ -50,7 +67,10 @@ export default function Cadastro() {
               </div>
 
               <div className={styles.inputBox}>
-                <label htmlFor="lastname" className={styles.inputBox__label}> Sobrenome </label>
+                <label htmlFor="lastname" className={styles.inputBox__label}>
+                  {" "}
+                  Sobrenome{" "}
+                </label>
                 <input
                   id="lastname"
                   typeof="text"
@@ -61,21 +81,31 @@ export default function Cadastro() {
                 ></input>
               </div>
 
-              
-              <div className={styles.inputBox}>
-                <label htmlFor="email" className={styles.inputBox__label}> Email </label>
-                <input
-                  id="email"
-                  typeof="email"
-                  name="email"
-                  placeholder="Digite seu email"
-                  required
-                  className={styles.inputBox__input}
-                ></input>
-              </div>
+              <Formik
+                initialValues={initialValues}
+                validationSchema={validationSchema}
+                onSubmit={handleSubmit} 
+      >
+        {(formikProps) => (
+          <Form>
+            <div>
+              <label htmlFor="email">Email:</label>
+              <Field type="text" id="email" name="email" />
+            </div>
+            <div>
+              <label htmlFor="password">Password:</label>
+              <Field type="password" id="password" name="password" />
+            </div>
+            <button type="submit">Submit</button>
+          </Form>
+        )}
+      </Formik>
 
               <div className={styles.inputBox}>
-                <label htmlFor="number" className={styles.inputBox__label}> Telefone </label>
+                <label htmlFor="number" className={styles.inputBox__label}>
+                  {" "}
+                  Telefone{" "}
+                </label>
                 <input
                   id="number"
                   typeof="tel"
@@ -87,7 +117,10 @@ export default function Cadastro() {
               </div>
 
               <div className={styles.inputBox}>
-                <label htmlFor="password" className={styles.inputBox__label}> Senha </label>
+                <label htmlFor="password" className={styles.inputBox__label}>
+                  {" "}
+                  Senha{" "}
+                </label>
                 <input
                   id="password"
                   typeof="password"
@@ -99,7 +132,13 @@ export default function Cadastro() {
               </div>
 
               <div className={styles.inputBox}>
-                <label htmlFor="Confirmpassword" className={styles.inputBox__label}> Confirme sua senha </label>
+                <label
+                  htmlFor="Confirmpassword"
+                  className={styles.inputBox__label}
+                >
+                  {" "}
+                  Confirme sua senha{" "}
+                </label>
                 <input
                   id="Confirmpassword"
                   typeof="password"
@@ -118,34 +157,61 @@ export default function Cadastro() {
 
               <div className={styles.genderGroup}>
                 <div className={styles.genderInput}>
-                  <input type="radio" id="female" name="gender" className={styles.genderInput__input}/>
-                  <label htmlFor="female" className={styles.genderInput__label}>Feminino</label>
+                  <input
+                    type="radio"
+                    id="female"
+                    name="gender"
+                    className={styles.genderInput__input}
+                  />
+                  <label htmlFor="female" className={styles.genderInput__label}>
+                    Feminino
+                  </label>
                 </div>
 
                 <div className={styles.genderInput}>
-                  <input type="radio" id="male" name="gender" className={styles.genderInput__input}/>
-                  <label htmlFor="male" className={styles.genderInput__label}>Masculino</label>
+                  <input
+                    type="radio"
+                    id="male"
+                    name="gender"
+                    className={styles.genderInput__input}
+                  />
+                  <label htmlFor="male" className={styles.genderInput__label}>
+                    Masculino
+                  </label>
                 </div>
 
                 <div className={styles.genderInput}>
-                  <input type="radio" id="others" name="gender" className={styles.genderInput__input}/>
-                  <label htmlFor="others" className={styles.genderInput__label}>Outro</label>
+                  <input
+                    type="radio"
+                    id="others"
+                    name="gender"
+                    className={styles.genderInput__input}
+                  />
+                  <label htmlFor="others" className={styles.genderInput__label}>
+                    Outro
+                  </label>
                 </div>
 
                 <div className={styles.genderInput}>
-                  <input type="radio" id="none" name="gender" className={styles.genderInput__input}/>
-                  <label htmlFor="none" className={styles.genderInput__label}>Prefiro não dizer</label>
+                  <input
+                    type="radio"
+                    id="none"
+                    name="gender"
+                    className={styles.genderInput__input}
+                  />
+                  <label htmlFor="none" className={styles.genderInput__label}>
+                    Prefiro não dizer
+                  </label>
                 </div>
-
-               
               </div>
               <div className={styles.continueButton}>
-                  <button className={styles.continueButton__btn}>CONTINUE</button>
-                </div>
+                <button className={styles.continueButton__btn}>CONTINUE</button>
+              </div>
             </div>
           </form>
         </div>
       </div>
     </body>
+    </main>
   );
-}
+        }}
