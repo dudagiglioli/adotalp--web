@@ -1,9 +1,10 @@
 import styles from "./Cadastro.module.scss";
-import cat from "../../assets/Cat.png"
+import cat from "../../assets/Cat.png";
+import App from "./ImageInput/imageinput";
 
 export default function Cadastro() {
-  return (
 
+  return (
     <body className={styles.back}>
       <div className={styles.container}>
         <div className={styles.formImage}>
@@ -18,18 +19,19 @@ export default function Cadastro() {
               </div>
               <div className={styles.loginButton}>
                 <button className={styles.loginButton__button}>
-                  <h1  className={styles.loginButton__h1}> ENTRAR </h1>
-                  </button>
+                  <h1 className={styles.loginButton__h1}> ENTRAR </h1>
+                </button>
               </div>
             </div>
 
-            <div>
-              
-            </div>
+              <App/>
 
             <div className={styles.inputGroup}>
               <div className={styles.inputBox}>
-                <label htmlFor="firstname" className={styles.inputBox__label}> Nome </label>
+                <label htmlFor="firstname" className={styles.inputBox__label}>
+                  {" "}
+                  Nome{" "}
+                </label>
                 <input
                   id="nome"
                   type="text"
@@ -41,7 +43,10 @@ export default function Cadastro() {
               </div>
 
               <div className={styles.inputBox}>
-                <label htmlFor="cpf" className={styles.inputBox__label}> Cpf </label>
+                <label htmlFor="cpf" className={styles.inputBox__label}>
+                  {" "}
+                  Cpf{" "}
+                </label>
                 <input
                   id="cpf"
                   type=""
@@ -53,7 +58,10 @@ export default function Cadastro() {
               </div>
 
               <div className={styles.inputBox}>
-                <label htmlFor="email" className={styles.inputBox__label}> Email </label>
+                <label htmlFor="email" className={styles.inputBox__label}>
+                  {""}
+                  Email{""}
+                </label>
                 <input
                   id="email"
                   type="email"
@@ -65,7 +73,10 @@ export default function Cadastro() {
               </div>
 
               <div className={styles.inputBox}>
-                <label htmlFor="number" className={styles.inputBox__label}> Telefone </label>
+                <label htmlFor="number" className={styles.inputBox__label}>
+                  {" "}
+                  Telefone{" "}
+                </label>
                 <input
                   id="number"
                   type="tel"
@@ -78,7 +89,10 @@ export default function Cadastro() {
               </div>
 
               <div className={styles.inputBox}>
-                <label htmlFor="password" className={styles.inputBox__label}> Senha </label>
+                <label htmlFor="password" className={styles.inputBox__label}>
+                  {" "}
+                  Senha{" "}
+                </label>
                 <input
                   id="password"
                   type="password"
@@ -90,7 +104,13 @@ export default function Cadastro() {
               </div>
 
               <div className={styles.inputBox}>
-                <label htmlFor="Confirmpassword" className={styles.inputBox__label}> Confirme sua senha </label>
+                <label
+                  htmlFor="Confirmpassword"
+                  className={styles.inputBox__label}
+                >
+                  {" "}
+                  Confirme sua senha{" "}
+                </label>
                 <input
                   id="Confirmpassword"
                   type="password"
@@ -100,13 +120,10 @@ export default function Cadastro() {
                   className={styles.inputBox__input}
                 ></input>
               </div>
-
-              
-            </div>           
-            <div className={styles.continueButton}>
-                <button className={styles.continueButton__btn}>CONTINUE</button>
             </div>
-
+            <div className={styles.continueButton}>
+              <button className={styles.continueButton__btn}>CONTINUE</button>
+            </div>
           </form>
         </div>
       </div>
