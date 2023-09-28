@@ -1,5 +1,5 @@
 import styles from "./Cadastro.module.scss";
-import cat from "../../assets/Cat.png";
+import cat from "../../assets/cadastro-login/Cat.png";
 import ImageInput from "./ImageInput/imageinput";
 
 export default function Cadastro() {
@@ -23,18 +23,15 @@ export default function Cadastro() {
               </div>
             </div>
 
-            <div className={styles.avatarGroup}>
-              <div className={styles.avatrBox}>
+            <div className={styles.avatarSpace}>
+              <div className={styles.avatarBox}>
                 <ImageInput />
-              </div>
-              <div className={styles.avatrBox}>
-                <input type="date"/>
               </div>
             </div>
 
             <div className={styles.inputGroup}>
               <div className={styles.inputBox}>
-                <label htmlFor="firstname" className={styles.inputBox__label}>
+                <label htmlFor="nome" className={styles.inputBox__label}>
                   {" "}
                   Nome{" "}
                 </label>
@@ -55,7 +52,7 @@ export default function Cadastro() {
                 </label>
                 <input
                   id="cpf"
-                  type=""
+                  type="text"
                   name="cpf"
                   placeholder="Digite seu cpf"
                   required
@@ -85,8 +82,7 @@ export default function Cadastro() {
                 </label>
                 <input
                   id="number"
-                  type="tel"
-                  pattern="[0-9]{2"
+                  type="text"
                   name="number"
                   placeholder="(xx) xxxxx-xxxx"
                   required
@@ -126,6 +122,7 @@ export default function Cadastro() {
                   className={styles.inputBox__input}
                 ></input>
               </div>
+              
             </div>
             <div className={styles.continueButton}>
               <button className={styles.continueButton__btn}>CONTINUE</button>
