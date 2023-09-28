@@ -3,35 +3,33 @@ import cat from "../../assets/Cat.png";
 import * as yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
+const initialValues = {
+  email: '',
+  password: '',
+};
 
-function YourComponent() {
-  const initialValues = {
-    email: '',
-    password: '',
-  };
+const validationSchema = yup.object({
+  email: yup
+    .string()
+    .email("Entre com um email válido")
+    .required("Email válido"),
 
-  const validationSchema = yup.object({
-    email: yup
-      .string()
-      .email("Entre com um email válido")
-      .required("Email válido"),
-  
-    password: yup
-      .string()
-      .min(8, "Password minimum 8 characters")
-      .required("Password is required"),
-  });
+  password: yup
+    .string()
+    .min(8, "Password minimum 8 characters")
+    .required("Password is required"),
+});
 
-  const handleSubmit = (values: any) => {
-    console.log(values);
-  };
-
+const handleSubmit = (values: any) => {
+  console.log(values);
+};
 
 
 export default function Cadastro() {
   return (
-    <main>
+    <>
     <body className={styles.back}>
+
       <div className={styles.container}>
         <div className={styles.formImage}>
           <img src={cat} alt="ll" className={styles.img} />
@@ -82,10 +80,10 @@ export default function Cadastro() {
               </div>
 
               <Formik
-                initialValues={initialValues}
-                validationSchema={validationSchema}
-                onSubmit={handleSubmit} 
-      >
+                initialValues = {initialValues}
+                validationSchema = {validationSchema}
+                onSubmit = {handleSubmit}
+              >
         {(formikProps) => (
           <Form>
             <div>
@@ -212,6 +210,6 @@ export default function Cadastro() {
         </div>
       </div>
     </body>
-    </main>
+    </>
   );
-        }}
+        }
