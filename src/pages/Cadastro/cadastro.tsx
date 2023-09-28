@@ -1,9 +1,8 @@
 import styles from "./Cadastro.module.scss";
 import cat from "../../assets/Cat.png";
-import App from "./ImageInput/imageinput";
+import ImageInput from "./ImageInput/imageinput";
 
 export default function Cadastro() {
-
   return (
     <body className={styles.back}>
       <div className={styles.container}>
@@ -24,7 +23,14 @@ export default function Cadastro() {
               </div>
             </div>
 
-              <App/>
+            <div className={styles.avatarGroup}>
+              <div className={styles.avatrBox}>
+                <ImageInput />
+              </div>
+              <div className={styles.avatrBox}>
+                <input type="date"/>
+              </div>
+            </div>
 
             <div className={styles.inputGroup}>
               <div className={styles.inputBox}>

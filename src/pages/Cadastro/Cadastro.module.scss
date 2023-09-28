@@ -90,6 +90,18 @@
     position: absolute;
     border-radius: 10px;
 }
+
+.avatarGroup {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+.avatarBox{
+    display: flex;
+    margin-bottom: 1.1rem;
+}
+
 .inputGroup {
     display: flex;
     flex-wrap: wrap;
