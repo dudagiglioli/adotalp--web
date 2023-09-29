@@ -23,7 +23,7 @@ function App() {
         </label>
 
           <label htmlFor="image-file" className={styles.button}> 
-            <IoIosAdd size={"20px"}/>
+            <IoIosAdd size={"25px"}/>
           </label>
         
       </div>
