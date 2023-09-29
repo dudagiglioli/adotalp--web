@@ -2,6 +2,7 @@ import styles from "./Cadastro.module.scss";
 import cat from "../../assets/Cat.png";
 import * as yup from "yup";
 import { Formik, Form, Field, ErrorMessage } from "formik";
+import { cpf } from "cpf-cnpj-validator";
 
 const initialValues = {
   email: "",
@@ -23,6 +24,11 @@ const validationSchema = yup.object({
     .string()
     .required("Password confirmation is required")
     .oneOf([yup.ref("password")], "Confirmação incorreta"),
+
+  cpf: yup
+    .string()
+    .required("CPF is required")
+    .test((value) => cpf.isValid(value)),
 });
 
 const handleSubmit = (values: any) => {
@@ -68,18 +74,29 @@ export default function Cadastro() {
                 </div>
 
                 <div className={styles.inputBox}>
-                  <label htmlFor="lastname" className={styles.inputBox__label}>
+                  <label htmlFor="cpf" className={styles.inputBox__label}>
                     {" "}
                     CPF{" "}
                   </label>
-                  <input
-                    id="lastname"
-                    typeof="text"
-                    name="lastname"
-                    placeholder="Digite seu CPF"
-                    required
-                    className={styles.inputBox__input}
-                  ></input>
+                  <Formik
+                    initialValues={initialValues}
+                    validationSchema={validationSchema}
+                    onSubmit={handleSubmit}
+                  >
+                    {(formikProps) => (
+                      <Form>
+                        <div>
+                          <Field
+                            name="cpf"
+                            placeholder="Digite seu CPF"
+                            required
+                            className={styles.inputBox__input}
+                          />
+                          <ErrorMessage component="div" name="cpf" />
+                        </div>
+                      </Form>
+                    )}
+                  </Formik>
                 </div>
 
                 <div>
