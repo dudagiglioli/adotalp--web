@@ -18,6 +18,11 @@ const validationSchema = yup.object({
     .string()
     .min(8, "Password minimum 8 characters")
     .required("Password is required"),
+
+  confirmpassword: yup
+    .string()
+    .required("Password confirmation is required")
+    .oneOf([yup.ref("password")], "Confirmação incorreta"),
 });
 
 const handleSubmit = (values: any) => {
@@ -50,13 +55,13 @@ export default function Cadastro() {
                 <div className={styles.inputBox}>
                   <label htmlFor="firstname" className={styles.inputBox__label}>
                     {" "}
-                    Primeiro nome{" "}
+                    Nome Completo{" "}
                   </label>
                   <input
                     id="firstname"
                     typeof="text"
                     name="firstname"
-                    placeholder="Digite seu primeiro nome"
+                    placeholder="Digite seu nome completo"
                     required
                     className={styles.inputBox__input}
                   ></input>
@@ -65,19 +70,23 @@ export default function Cadastro() {
                 <div className={styles.inputBox}>
                   <label htmlFor="lastname" className={styles.inputBox__label}>
                     {" "}
-                    Sobrenome{" "}
+                    CPF{" "}
                   </label>
                   <input
                     id="lastname"
                     typeof="text"
                     name="lastname"
-                    placeholder="Digite seu sobrenome"
+                    placeholder="Digite seu CPF"
                     required
                     className={styles.inputBox__input}
                   ></input>
                 </div>
 
-                <div className={styles.inputBox}>
+                <div>
+                  <label htmlFor="email" className={styles.inputBox__label}>
+                    {""}
+                    Email{""}
+                  </label>
                   <Formik
                     initialValues={initialValues}
                     validationSchema={validationSchema}
@@ -85,24 +94,14 @@ export default function Cadastro() {
                   >
                     {(formikProps) => (
                       <Form>
-                        <div>
-                          <label
-                            htmlFor="email"
-                            className={styles.inputBox__label}
-                          >
-                            {""}
-                            Email
-                            {""}
-                          </label>
-                          <Field
-                            type="text"
-                            id="email"
-                            name="email"
-                            placeholder="Digite seu email"
-                            required
-                            className={styles.inputBox__input}
-                          />
-                        </div>
+                        <Field
+                          type="text"
+                          id="email"
+                          name="email"
+                          placeholder="Digite seu email"
+                          required
+                          className={styles.inputBox__input}
+                        />
                       </Form>
                     )}
                   </Formik>
@@ -125,31 +124,43 @@ export default function Cadastro() {
 
                 <div className={styles.inputBox}>
                   <label htmlFor="password" className={styles.inputBox__label}>
-                    {" "}
-                    Senha{" "}
+                    {""}
+                    Senha {""}
                   </label>
-                  <input
-                    id="password"
-                    typeof="password"
-                    name="password"
-                    placeholder="Digite sua senha"
-                    required
-                    className={styles.inputBox__input}
-                  ></input>
+                  <Formik
+                    initialValues={initialValues}
+                    validationSchema={validationSchema}
+                    onSubmit={handleSubmit}
+                  >
+                    {(formikProps) => (
+                      <Form>
+                        <div>
+                          <Field
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Digite sua senha"
+                            required
+                            className={styles.inputBox__input}
+                          />
+                        </div>
+                      </Form>
+                    )}
+                  </Formik>
                 </div>
 
                 <div className={styles.inputBox}>
                   <label
-                    htmlFor="Confirmpassword"
+                    htmlFor="confirmpassword"
                     className={styles.inputBox__label}
                   >
                     {" "}
                     Confirme sua senha{" "}
                   </label>
                   <input
-                    id="Confirmpassword"
-                    typeof="password"
-                    name="password"
+                    id="confirmpassword"
+                    typeof="confirmpassword"
+                    name="confirmpassword"
                     placeholder="Confirme sua senha"
                     required
                     className={styles.inputBox__input}
@@ -217,6 +228,7 @@ export default function Cadastro() {
                     </label>
                   </div>
                 </div>
+
                 <div className={styles.continueButton}>
                   <button className={styles.continueButton__btn}>
                     CONTINUE
