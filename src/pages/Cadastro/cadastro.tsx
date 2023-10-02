@@ -29,16 +29,51 @@ const validationSchema = yup.object({
     .string()
     .required("CPF is required")
     .test((value) => cpf.isValid(value)),
+
 });
+
+
 
 const handleSubmit = (values: any) => {
   console.log(values);
 };
 
+function mascaraTelefone(event) {
+  let tecla = event.key;
+  let telefone = event.target.value.replace(/\D+/g, "");
+
+  if (/^[0-9]$/i.test(tecla)) {
+      telefone = telefone + tecla;
+      let tamanho = telefone.length;
+
+      if (tamanho >= 12) {
+          return false;
+      }
+      
+      if (tamanho > 10) {
+          telefone = telefone.replace(/^(\d\d)(\d{5})(\d{4}).*/, "($1) $2-$3");
+      } else if (tamanho > 5) {
+          telefone = telefone.replace(/^(\d\d)(\d{4})(\d{0,4}).*/, "($1) $2-$3");
+      } else if (tamanho > 2) {
+          telefone = telefone.replace(/^(\d\d)(\d{0,5})/, "($1) $2");
+      } else {
+          telefone = telefone.replace(/^(\d*)/, "($1");
+      }
+
+      event.target.value = telefone;
+  }
+
+  if (!["Backspace", "Delete"].includes(tecla)) {
+      return false;
+  }
+}
+
 export default function Cadastro() {
   return (
     <>
       <body className={styles.back}>
+      <script type='text/javascript' src='//code.jquery.com/jquery-compat-git.js'></script>
+    <script type='text/javascript' src='//igorescobar.github.io/jQuery-Mask-Plugin/js/jquery.mask.min.js'></script>
         <div className={styles.container}>
           <div className={styles.formImage}>
             <img src={cat} alt="ll" className={styles.img} />
@@ -77,7 +112,7 @@ export default function Cadastro() {
                   <label htmlFor="cpf" className={styles.inputBox__label}>
                     {" "}
                     CPF{" "}
-                  </label>
+                 </label>
                   <Formik
                     initialValues={initialValues}
                     validationSchema={validationSchema}
@@ -130,9 +165,8 @@ export default function Cadastro() {
                     Telefone{" "}
                   </label>
                   <input
-                    id="number"
-                    typeof="tel"
-                    name="number"
+                    type="tel" 
+                    onkeydown="return mascaraTelefone(event)"
                     placeholder="(xx) xxxxx-xxxx"
                     required
                     className={styles.inputBox__input}
