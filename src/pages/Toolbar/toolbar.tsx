@@ -1,26 +1,32 @@
 import styles from "./Toolbar.module.scss";
 import logo from "../../assets/logo.png";
 import { BiSearch } from "react-icons/bi";
+import { GoPerson } from "react-icons/go";
+import { Link } from "react-router-dom";
 
 export default function Toolbar() {
- return(
-   <header className={styles.toolbar}>
-
-     <div className={styles.start}>
-      <img src={logo} alt="Logo Adota LP" className={styles.start__logo}/>
-     </div>
-
-     <div className={styles.middle}>
-    
-     </div>
-
-     <div className={styles.end}>
-     <div className={styles.end__searchBox}>
-        <button className={styles.end__searchBox__searchButton}>
-        <BiSearch className={styles.end__searchBox__searchIcon} size={30}/>
-        </button>
+  return (
+    <header className={styles.toolbar}>
+      <div className={styles.start}>
+        <Link to={"/"}>
+          <img src={logo} alt="Logo Adota LP" className={styles.start__logo} />
+        </Link>
       </div>
-     </div>
-   </header>
- )
+
+      <div className={styles.middle}></div>
+
+      <div className={styles.end}>
+        <div className={styles.end__searchBox}>
+          <button className={styles.end__searchButton}>
+            <BiSearch size={"35px"} />
+          </button>
+          <Link to={"/cadastro"}>
+            <button className={styles.end__searchButton}>
+              <GoPerson size={"35px"} />
+            </button>
+          </Link>
+        </div>
+      </div>
+    </header>
+  );
 }

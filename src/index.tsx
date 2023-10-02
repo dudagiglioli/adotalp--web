@@ -1,15 +1,44 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import Cadastro from './pages/Cadastro/cadastro';
-import Toolbar from './pages/Toolbar/toolbar';
+import React, { Children } from "react";
+import ReactDOM from "react-dom/client";
+import "./index.css";
+import Toolbar from "./pages/Toolbar/toolbar";
+import Home from "./pages/Home/home";
+import Cadastro from "./pages/Cadastro/cadastro";
+import Test from "./components/test"
+import ErrorPage from "./pages/ErrorPage/errorpage";
+
+// 1- configurando o router
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
+
+
+
+const router = createBrowserRouter([
+  {
+    path: "/",
+    element: <Home/>,
+    // Pagina de erro xxxxxxxx
+    errorElement: <ErrorPage/>,
+    children: [
+      {
+      path: "/",
+      element: <Test/>,
+      },
+      {
+        path: "cadastro",
+        element: <Cadastro/>,
+      },
+    ]
+  }
+]);
 
 const root = ReactDOM.createRoot(
-  document.getElementById('root') as HTMLElement
+  document.getElementById("root") as HTMLElement
 );
 root.render(
   <React.StrictMode>
-    <Toolbar/>
+    <RouterProvider router={router}/>
   </React.StrictMode>
 );
 
+
+// https://www.youtube.com/watch?v=7b42lVMdEjE  QUAQLUER DUVIDA SOBRE AS rotas
