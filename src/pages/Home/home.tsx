@@ -1,4 +1,4 @@
-import Toolbar from "../Toolbar/toolbar";
+import Toolbar from "../../components/Toolbar/toolbar";
 
 
 // 2- Reaproveitamento da estrutura do router
@@ -10,6 +10,7 @@ export default function Home(){
     return(
         <div className="back">
             <Toolbar/>
+            <Outlet/>
         </div>
     );
 }

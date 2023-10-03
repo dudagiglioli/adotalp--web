@@ -1,10 +1,8 @@
 import React, { Children } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import Toolbar from "./pages/Toolbar/toolbar";
 import Home from "./pages/Home/home";
 import Cadastro from "./pages/Cadastro/cadastro";
-import Test from "./components/test"
 import ErrorPage from "./pages/ErrorPage/errorpage";
 
 // 1- configurando o router
@@ -19,10 +17,6 @@ const router = createBrowserRouter([
     // Pagina de erro xxxxxxxx
     errorElement: <ErrorPage/>,
     children: [
-      {
-      path: "/",
-      element: <Test/>,
-      },
       {
         path: "cadastro",
         element: <Cadastro/>,

@@ -1,0 +1,42 @@
+.back{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(148, 148, 148);
+}
+.container{
+    width: 70%;
+    height: 70vh;
+    display: flex; 
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+    border-radius: 10px;
+    background-color: rgb(231, 230, 230);
+    justify-content: space-between;
+}
+.startBox{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.endBox{
+    width: 50%;
+    height: 100%;
+}
+.comeback{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    position: absolute;
+    background: none;
+    margin-right: 28%;
+    margin-top: 30px;
+    border-radius: 50%;
+}
+.comeback:hover{
+    cursor: pointer;
+}
