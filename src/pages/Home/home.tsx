@@ -1,16 +1,16 @@
 import Toolbar from "../../components/Toolbar/toolbar";
+import styles from "./Home.module.scss";
+import Banner from "../../assets/banner.png";
 
-
-// 2- Reaproveitamento da estrutura do router
-import { Outlet } from "react-router-dom";
-// serve para quando tiver lá no seu index.tsx no path, children, tiver uma / tambem, sendo assim ele vai buscar os dois ao
-// mesmo tempo mostrando os juntos, para isso é so importar e puxar ele como se fosse um component
-
-export default function Home(){
-    return(
-        <div className="back">
-            <Toolbar/>
-            <Outlet/>
+export default function Home() {
+  return (
+    <body>
+      <Toolbar />
+      <div className={styles.back}>
+        <div className={styles.bannerBox}>
+          <img src={Banner} alt="" className={styles.bannerBox__img}/>
         </div>
-    );
+      </div>
+    </body>
+  );
 }

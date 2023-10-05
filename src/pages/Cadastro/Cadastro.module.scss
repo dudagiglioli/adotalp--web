@@ -9,6 +9,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
 }
 .container{
     width: 80%;
@@ -69,9 +70,10 @@
         border-color: #2d7bf6;
         color: white   ;
     }      
-    &__h1{
-        font-weight: 900;
-        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+    &__text{
+        font-size: 13px;
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;       
+        font-weight: bold;
     }
 
 }
@@ -173,6 +175,19 @@
     .form{
         width: 100%;
     }
+    .loginButton{
+        justify-content: center;
+        align-items: center;
+
+        &__button{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        &__text{
+            font-size: 10px;    
+        }
+    }
 }
 @media screen and (max-width: 1064px) {
     .container{
@@ -186,5 +201,5 @@
         max-height: 10rem;
         padding-right: 5rem;
     }
-
+    
 }
