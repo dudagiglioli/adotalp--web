@@ -1,6 +1,7 @@
 .back{
     height: 100%;
     width: 100%;
+    background-color: white;
 }
 .bannerBox{
     width: 100%;
@@ -11,18 +12,45 @@
         max-height: 320px;
     }
 }
-.br{
-    width: 100%;
-    height: 1px;
-    background-color: #11b3f8;
-    border: solid #11b3f8;
-    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
-    rotate: 180;
-    position: absolute;
+.adoteContainer{
+    background-color:   white;
+    height: 30vh;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+    position: relative;
 }
-.animalContainer{
-    width: 100%;
-    height: 40vh;
-    background-color: #11b3f8;
- 
+.adoteBox{
+    background: none;
+    height: 100%;
+    margin-left: 10%;
+    margin-right: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    gap: 20px;
+
+    &__title{
+        font-size: 50px;
+        font-weight: 900;
+        font-family: 'Roboto', sans-serif;
+        color: #505050;
+    }
+    &__subtitle{
+        font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        color: #505050;
+    }
 }
+.animaisContainer{
+    background-color: white;
+    height: 30vh;
+}
+
+
+
+
+
+// cor letra #505050
+// azul mais escuro #338BEF
+// azul médio #00B0FC
+// azul claro #47C1E6

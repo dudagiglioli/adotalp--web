@@ -1,0 +1,7 @@
+<div className={styles.animalContainer}>
+          {Animal.map((animal) => {
+            return <div>{animal.nomeAnimal}</div>;
+          })}
+        </div>
+
+        
