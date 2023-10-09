@@ -41,20 +41,40 @@
         color: #505050;
     }
 }
-.animaisContainer{
-    background-color: rgb(201, 201, 201);
+.animais{
+    background-color: rgb(231, 231, 231);
     display: flex;
     flex-wrap: nowrap;
     justify-content: center;
     align-items: center;
     padding: 2rem 0;
 }
-.animaisBox{
-    background-color: aliceblue;
+.animaisContainer{
+    background-color:#619eff;
+    background-image: linear-gradient( to right, #00B0FC, transparent, #2d7bf6);
     width: 80%;
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
+}
+.animaisBox{
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+}
+.animaisCard{
+    height: 20vh;
+    width: 50%;
+    background-color: aliceblue;
+}
+.imgBox{
+    height: 50%;
+
+    &__img{
+        height: 100%;
+    }
 }
 
 

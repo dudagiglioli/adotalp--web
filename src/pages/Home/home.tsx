@@ -1,7 +1,12 @@
 import Toolbar from "../../components/Toolbar/toolbar";
 import styles from "./Home.module.scss";
 import Banner from "../../assets/banner.png";
-import AnimalDados from "../../dados/animais.json";
+// import AnimalDados from "../../dados/animais.json";
+import AnimalDados from "../../dados/animais";
+import nescau from "../../assets/animais/nescau.png";
+import chuvisco from "../../assets/animais/chuvisco.png";
+import princesa from "../../assets/animais/princesa.png";
+
 
 export default function Home() {
   return (
@@ -25,19 +30,23 @@ export default function Home() {
         </div>
         {/* Fim do adoteContainer */}
 
-        <div className={styles.animaisContainer}>
-
-        {
-          AnimalDados.map( dados => {
-            return(
-              <div>
-                {dados.nomeAnimal}
-              </div>
-            )
-          } )
-        }
-
-
+        <div className={styles.animais}>
+          <div className={styles.animaisContainer}>
+            {AnimalDados.map((dados) => {
+              return (
+                <div className={styles.animaisBox}>
+                    <div className={styles.animaisCard}>
+                      <div className={styles.imgBox}>
+                        <img src={dados.fotoAnimal} alt="" className={styles.imgBox__img}/>
+                      </div>
+                      <div className={styles.imgText}>
+                        <p>dsafhgu</p>
+                      </div>
+                    </div>
+                </div>
+              )
+            })}
+          </div>
         </div>
         {/* Fim do animaisContainer */}
       </div>

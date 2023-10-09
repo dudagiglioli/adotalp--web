@@ -2,6 +2,7 @@
   {
     "id": 1,
     "nomeAnimal": "Nescau",
+    "fotoAnimal": "../assets/animais/nescau.jpg",
     "sexo": "M",
     "idade": 3,
     "porte": "grande",
@@ -11,6 +12,7 @@
   {
     "id": 2,
     "nomeAnimal": "Princesa",
+    "fotoAnimal": "../assets/animais/princesa.jpg",
     "sexo": "F",
     "idade": 1,
     "porte": "Grande",
@@ -20,6 +22,7 @@
   {
     "id": 3,
     "nomeAnimal": "Chuvisco",
+    "fotoAnimal": "../assets/animais/chuvisco.jpg",
     "sexo": "M",
     "idade": 5,
     "porte": "Pequeno",
@@ -27,3 +30,4 @@
     "situacaoAnimal": "Bom estado, porém possui cegueira em seu olho direito"
   }
 ]
+
