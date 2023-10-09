@@ -1,6 +1,0 @@
-
-          {Animal.map((animal) => {
-            return <div>{animal.nomeAnimal}</div>;
-          })}
-
-        
