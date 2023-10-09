@@ -1,8 +1,7 @@
 import Toolbar from "../../components/Toolbar/toolbar";
 import styles from "./Home.module.scss";
 import Banner from "../../assets/banner.png";
-
-import Animal from "../../components/Dados/animais.json";
+import AnimalCards from "../../components/AnimalCards/animal";
 
 export default function Home() {
   return (
@@ -23,7 +22,7 @@ export default function Home() {
 
         <div className={styles.animaisContainer}>
           <div className={styles.animaisBox}>
-
+            <AnimalCards/>
           </div>
         </div>
         {/* Fim do animaisContainer */}

@@ -11,7 +11,7 @@ export default function Cadastro() {
       <div className={styles.back}>
         <div className={styles.container}>
           <div className={styles.formImage}>
-            <img src={cat} alt="Image" className={styles.img} />
+            <img src={cat} alt="gato" className={styles.img}/>
           </div>
 
           <div className={styles.form}>
