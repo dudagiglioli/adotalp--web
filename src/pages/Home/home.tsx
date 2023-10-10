@@ -6,6 +6,7 @@ import AnimalDados from "../../dados/animais";
 import nescau from "../../assets/animais/nescau.png";
 import chuvisco from "../../assets/animais/chuvisco.png";
 import princesa from "../../assets/animais/princesa.png";
+import dados from '../../dados/animais';
 
 export default function Home() {
   return (
@@ -22,8 +23,8 @@ export default function Home() {
           <div className={styles.adoteBox}>
             <h1 className={styles.adoteBox__title}> QUER ADOTAR UM PET? </h1>
             <h3 className={styles.adoteBox__subtitle}>
-              Que tal um novo amigo na sua casa?, dê uma conferida em alguns que
-              estão disponíveis!
+              Que tal um novo amigo na sua casa? Dê uma conferida em alguns que
+              estão para a adoção!
             </h3>
           </div>
         </div>
@@ -35,8 +36,30 @@ export default function Home() {
                 <div className={styles.animaisCard}>
                   <div className={styles.imgBox}>
                     <img src={dados.fotoAnimal} alt="Foto do animal" className={styles.imgBox__img}/>
+                    <div className={styles.imgBox__cidadeBox}>
+                      <div className={styles.cidadeContent}>
+                        <h1 className={styles.cidadeContent__text}>{dados.cidade}</h1>
+                      </div>
+                    </div>
                   </div>
-                  <div className={styles.cardText}></div>
+                  <div className={styles.cardText}>
+                    <div className={styles.cardTextStart}>
+                      <h1 className={styles.cardTextStart__title}> {dados.nomeAnimal} </h1>
+                    </div>
+                    <div className={styles.cardTextEnd}>
+
+                      <div className={styles.categorias}>
+                        <h1 className={styles.categorias__text}> IDADE - </h1>
+                        <h1 className={styles.categorias__text}> PORTE - </h1>
+                      </div>
+                      <div className={styles.dadosCategorias}>
+                        <h1 className={styles.dadosCategorias__text}> {dados.idade} </h1>
+                        <h1 className={styles.dadosCategorias__text}> {dados.porte} </h1>
+                      </div>
+
+                    </div>
+
+                  </div>
                 </div>
               );
             })}
