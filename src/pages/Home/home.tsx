@@ -37,10 +37,10 @@ export default function Home() {
                 <div className={styles.animaisBox}>
                     <div className={styles.animaisCard}>
                       <div className={styles.imgBox}>
-                        <img src={dados.fotoAnimal} alt="" className={styles.imgBox__img}/>
+                        <img src={dados.fotoAnimal} alt="Foto do Animal" className={styles.imgBox__img}/>
                       </div>
-                      <div className={styles.imgText}>
-                        <p>dsafhgu</p>
+                      <div className={styles.cardText}>
+                        <h1>{dados.nomeAnimal}</h1>
                       </div>
                     </div>
                 </div>

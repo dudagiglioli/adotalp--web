@@ -13,7 +13,7 @@
     }
 }
 .adoteContainer{
-    background-color:   white;
+    background-color: rgb(248, 248, 248);
     height: 30vh;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
     position: relative;
@@ -50,12 +50,13 @@
     padding: 2rem 0;
 }
 .animaisContainer{
-    background-color:#619eff;
-    background-image: linear-gradient( to right, #00B0FC, transparent, #2d7bf6);
-    width: 80%;
+    background-color:#619eff;   
+    width: 85%;
     display: flex;
     justify-content: space-between;
     flex-wrap: nowrap;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
+    border-radius: 10px;
 }
 .animaisBox{
     width: 50%;
@@ -65,16 +66,48 @@
     padding: 2rem 0;
 }
 .animaisCard{
-    height: 20vh;
-    width: 50%;
-    background-color: aliceblue;
+    width: 65%;
+    border-radius: 10px;
+    background: radial-gradient(circle at center, blue, green, yellow) border-box;
+    border: solid 2px transparent;
+    cursor: pointer;
+}
+@keyframes anima{
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.05);
+    }
+}
+.animaisCard:hover{
+
+    animation-name: anima;
+    animation-duration: 0.5s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: 1;
+    animation-direction: normal;
+    animation-fill-mode: forwards;
 }
 .imgBox{
     height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
 
     &__img{
         height: 100%;
+        width: 100%;
+        border-radius: 10px 10px 0 0;
     }
+}
+.cardText{
+    height: 10vh;
+    border-top: solid 1px;
+    background-color: rgb(231, 231, 231);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
 }
 
 
