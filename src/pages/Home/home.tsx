@@ -7,7 +7,6 @@ import nescau from "../../assets/animais/nescau.png";
 import chuvisco from "../../assets/animais/chuvisco.png";
 import princesa from "../../assets/animais/princesa.png";
 
-
 export default function Home() {
   return (
     <body>
@@ -30,23 +29,17 @@ export default function Home() {
         </div>
         {/* Fim do adoteContainer */}
 
-        <div className={styles.animais}>
-          <div className={styles.animaisContainer}>
+        <div className={styles.animais}> 
             {AnimalDados.map((dados) => {
               return (
-                <div className={styles.animaisBox}>
-                    <div className={styles.animaisCard}>
-                      <div className={styles.imgBox}>
-                        <img src={dados.fotoAnimal} alt="Foto do Animal" className={styles.imgBox__img}/>
-                      </div>
-                      <div className={styles.cardText}>
-                        <h1>{dados.nomeAnimal}</h1>
-                      </div>
-                    </div>
+                <div className={styles.animaisCard}>
+                  <div className={styles.imgBox}>
+                    <img src={dados.fotoAnimal} alt="Foto do animal" className={styles.imgBox__img}/>
+                  </div>
+                  <div className={styles.cardText}></div>
                 </div>
-              )
+              );
             })}
-          </div>
         </div>
         {/* Fim do animaisContainer */}
       </div>

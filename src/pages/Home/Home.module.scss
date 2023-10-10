@@ -45,31 +45,15 @@
     background-color: rgb(231, 231, 231);
     display: flex;
     flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    padding: 2rem 0;
-}
-.animaisContainer{
-    background-color:#619eff;   
-    width: 85%;
-    display: flex;
     justify-content: space-between;
-    flex-wrap: nowrap;
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 20px 0px;
-    border-radius: 10px;
-}
-.animaisBox{
-    width: 50%;
-    display: flex;
-    justify-content: center;
     align-items: center;
-    padding: 2rem 0;
+    padding: 5% 10%;
+    gap: 10px;
 }
+
 .animaisCard{
-    width: 65%;
+    width: 20%;
     border-radius: 10px;
-    background: radial-gradient(circle at center, blue, green, yellow) border-box;
-    border: solid 2px transparent;
     cursor: pointer;
 }
 @keyframes anima{
@@ -96,6 +80,8 @@
     align-items: center;
     border-radius: 10px;
 
+
+
     &__img{
         height: 100%;
         width: 100%;
@@ -103,11 +89,25 @@
     }
 }
 .cardText{
-    height: 10vh;
     border-top: solid 1px;
     background-color: rgb(231, 231, 231);
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    
+}
+.cardTextStart{
+    width: 70%;
+    height: 100%;
+    &__title{
+        
+    }
+}
+.cardTextEnd{
+    width: 30%;
+    height: 100%;
 }
 
 
