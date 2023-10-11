@@ -9,7 +9,7 @@ const dados = [
         fotoAnimal: nescau,
         sexo: "M",
         idade: 0.3,
-        porte: "grande",
+        porte: "Grande",
         cidade: "Macatuba",
         situacaoAnimal: "Bom estado"
       },

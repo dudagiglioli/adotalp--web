@@ -30,39 +30,41 @@ export default function Home() {
         </div>
         {/* Fim do adoteContainer */}
 
-        <div className={styles.animais}> 
-            {AnimalDados.map((dados) => {
-              return (
-                <div className={styles.animaisCard}>
-                  <div className={styles.imgBox}>
-                    <img src={dados.fotoAnimal} alt="Foto do animal" className={styles.imgBox__img}/>
-                    <div className={styles.imgBox__cidadeBox}>
-                      <div className={styles.cidadeContent}>
-                        <h1 className={styles.cidadeContent__text}>{dados.cidade}</h1>
-                      </div>
+        <div className={styles.animais}>
+          {AnimalDados.map((dados) => {
+            return (
+              <div className={styles.animaisCard}>
+                <div className={styles.imgBox}>
+                  <img src={dados.fotoAnimal} alt="Foto do animal" className={styles.imgBox__img} />
+                  <div className={styles.imgBox__cidadeBox}>
+                    <div className={styles.cidadeContent}>
+                      <h1 className={styles.cidadeContent__text}>{dados.cidade}</h1>
                     </div>
-                  </div>
-                  <div className={styles.cardText}>
-                    <div className={styles.cardTextStart}>
-                      <h1 className={styles.cardTextStart__title}> {dados.nomeAnimal} </h1>
-                    </div>
-                    <div className={styles.cardTextEnd}>
-
-                      <div className={styles.categorias}>
-                        <h1 className={styles.categorias__text}> IDADE - </h1>
-                        <h1 className={styles.categorias__text}> PORTE - </h1>
-                      </div>
-                      <div className={styles.dadosCategorias}>
-                        <h1 className={styles.dadosCategorias__text}> {dados.idade} </h1>
-                        <h1 className={styles.dadosCategorias__text}> {dados.porte} </h1>
-                      </div>
-
-                    </div>
-
                   </div>
                 </div>
-              );
-            })}
+                <div className={styles.cardText}>
+                  <div className={styles.cardTextStart}>
+                    <h1 className={styles.cardTextStart__title}> {dados.nomeAnimal} </h1>
+                    <div className={styles.cardTextStart__line}>.</div>
+                  </div>
+                
+                  <div className={styles.cardTextEnd}>
+
+                    <div className={styles.categorias}>
+                        <h1 className={styles.categoriasText}> IDADE -  </h1>
+                        <h1 className={styles.categoriasText2}> {dados.idade} </h1>
+                    </div>
+                    <div className={styles.categorias}>
+                        <h1 className={styles.categoriasText}> PORTE - </h1>
+                        <h1 className={styles.categoriasText2}> {dados.porte} </h1>
+                    </div>
+
+                  </div>
+
+                </div>
+              </div>
+            );
+          })}
         </div>
         {/* Fim do animaisContainer */}
       </div>
