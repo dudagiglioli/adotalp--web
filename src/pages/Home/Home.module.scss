@@ -138,6 +138,12 @@
         color: #505050;
         font-weight: 900;
     }
+    &__line{
+        height: 6px;
+        background-image: linear-gradient(to right, #2b7bf6, transparent);
+        width: 70%;
+        border-radius: 20px;
+    }
 }
 
 
