@@ -44,9 +44,7 @@ export default function Home() {
                 </div>
                 <div className={styles.cardText}>
                   <div className={styles.cardTextStart}>
-                    <h1 className={styles.cardTextStart__title}> {dados.nomeAnimal} </h1>
-                    <div className={styles.cardTextStart__line}>.</div>
-                  </div>
+                    <h1 className={styles.cardTextStart__title}> {dados.nomeAnimal} </h1>                  </div>
                 
                   <div className={styles.cardTextEnd}>
 
