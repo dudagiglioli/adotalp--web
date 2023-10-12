@@ -3,9 +3,7 @@ import styles from "./Home.module.scss";
 import Banner from "../../assets/banner.png";
 // import AnimalDados from "../../dados/animais.json";
 import AnimalDados from "../../dados/animais";
-import nescau from "../../assets/animais/nescau.png";
-import chuvisco from "../../assets/animais/chuvisco.png";
-import princesa from "../../assets/animais/princesa.png";
+
 import dados from '../../dados/animais';
 
 export default function Home() {
@@ -44,7 +42,9 @@ export default function Home() {
                 </div>
                 <div className={styles.cardText}>
                   <div className={styles.cardTextStart}>
-                    <h1 className={styles.cardTextStart__title}> {dados.nomeAnimal} </h1>                  </div>
+                    <h1 className={styles.cardTextStart__title}> {dados.nomeAnimal} </h1>                 
+                    <div className={styles.cardTextStart__line}>.</div>
+                  </div>
                 
                   <div className={styles.cardTextEnd}>
 
