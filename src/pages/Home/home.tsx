@@ -3,8 +3,7 @@ import styles from "./Home.module.scss";
 import Banner from "../../assets/banner.png";
 // import AnimalDados from "../../dados/animais.json";
 import AnimalDados from "../../dados/animais";
-
-import dados from '../../dados/animais';
+import Footer from "../../components/Footer/footer";
 
 export default function Home() {
   return (
@@ -66,6 +65,9 @@ export default function Home() {
         </div>
         {/* Fim do animaisContainer */}
       </div>
+      <footer>
+        <Footer/>
+      </footer>
     </body>
   );
 }

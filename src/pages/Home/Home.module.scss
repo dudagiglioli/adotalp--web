@@ -31,10 +31,11 @@
     gap: 20px;
 
     &__title{
-        font-size: 50px;
+        font-size: 40px;
         font-weight: 900;
         font-family: 'Roboto', sans-serif;
         color: #505050;
+        text-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
     }
     &__subtitle{
         font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -42,7 +43,7 @@
     }
 }
 .animais{
-    background-color: rgba(45, 123, 246, 0.8);
+    background-color: rgba(152, 188, 255, 0.3);
     display: flex;
     flex-wrap:wrap;
     justify-content: space-between;
