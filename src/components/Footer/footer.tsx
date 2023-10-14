@@ -21,8 +21,16 @@ export default function Footer() {
                             para os animais!
                         </h1>
                     </div>
-                    <BiCode/>
-                    <BiCommentError/>
+                    <div className={styles.boxButton}>
+                        <div className={styles.button}>
+                            <BiCode size={"25px"} />
+                            <h1 className={styles.button__text}> Desenvolvedores </h1>
+                        </div>
+                        <div className={styles.button}>
+                            <BiCommentError size={"25px"} />
+                            <h1 className={styles.button__text}>Central de Ajuda</h1>
+                        </div>
+                    </div>
                 </div>
 
             </div>
