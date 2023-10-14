@@ -1,6 +1,7 @@
 import styles from "./Footer.module.scss";
 import logo from "../../assets/logo.png";
 import { BiCommentError, BiCode } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
     return (
@@ -22,10 +23,12 @@ export default function Footer() {
                         </h1>
                     </div>
                     <div className={styles.boxButton}>
-                        <div className={styles.button}>
-                            <BiCode size={"25px"} />
-                            <h1 className={styles.button__text}> Desenvolvedores </h1>
-                        </div>
+                        <Link to={"/desenvolvedores"}>
+                            <div className={styles.button}>
+                                <BiCode size={"25px"} />
+                                <h1 className={styles.button__text}> Desenvolvedores </h1>
+                            </div>
+                        </Link>
                         <div className={styles.button}>
                             <BiCommentError size={"25px"} />
                             <h1 className={styles.button__text}>Central de Ajuda</h1>
