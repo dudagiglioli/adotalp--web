@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Yellowtail&display=swap');
+
 
 .back{
     height: 100%;
@@ -5,17 +7,36 @@
     background-color: white;
 }
 .bannerBox{
+    position: relative;
     width: 100%;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    text-align: center;
+   
     &__img{
         width: 100%;
     }
     &__text{
         display: flex;
-        position: relative;
+        position: absolute;
+
+        flex-direction: column;
+        gap: 10px;
     }
+}
+.h1{
+    color: white;
+    font-family: 'Yellowtail', cursive;
+    font-size: 100px;
+    opacity: 0.8;
+    font-weight: 900;
+}
+.h2{
+    color: white;
+    font-family: 'Zeyada', cursive;
+    font-size: 40px;
+    opacity: 0.8;
 }
 
 .adoteContainer{

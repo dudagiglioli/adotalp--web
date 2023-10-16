@@ -1,9 +1,9 @@
-import Toolbar from "../../components/Toolbar/toolbar";
+import Toolbar from "../../components/Toolbar";
 import styles from "./Home.module.scss";
 import Banner from "../../assets/banner2.png";
 // import AnimalDados from "../../dados/animais.json";
 import AnimalDados from "../../dados/animais";
-import Footer from "../../components/Footer/footer";
+import Footer from "../../components/Footer";
 
 export default function Home() {
   return (
@@ -15,7 +15,8 @@ export default function Home() {
         <div className={styles.bannerBox}>
           <img src={Banner} alt="" className={styles.bannerBox__img} />
           <div className={styles.bannerBox__text}>
-            BEM-VINDO!
+             <h1 className={styles.h1}>Bem-Vindo</h1>
+             <h1 className={styles.h2}>O amor não pode ser comprado, mas pode ser adotado!</h1>
           </div>
         </div>
      

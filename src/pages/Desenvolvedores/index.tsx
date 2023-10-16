@@ -1,4 +1,4 @@
-import Toolbar from "../../components/Toolbar/toolbar";
+import Toolbar from "../../components/Toolbar";
 import styles from "./Desenvolvedores.module.scss";
 import Marcela from "../../assets/desenvolvedores/Marcela.png";
 import Nickolas from "../../assets/desenvolvedores/nickolas.png";
