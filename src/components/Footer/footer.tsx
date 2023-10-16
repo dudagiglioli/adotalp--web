@@ -29,10 +29,12 @@ export default function Footer() {
                                 <h1 className={styles.button__text}> Desenvolvedores </h1>
                             </div>
                         </Link>
+                        <Link to={"/ajuda"}>
                         <div className={styles.button}>
                             <BiCommentError size={"25px"} />
                             <h1 className={styles.button__text}>Central de Ajuda</h1>
                         </div>
+                        </Link>
                     </div>
                 </div>
 

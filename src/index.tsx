@@ -8,6 +8,7 @@ import ErrorPage from "./pages/ErrorPage/errorpage";
 // 1- configurando o router
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Desenvolvedores from "./pages/Desenvolvedores/desenvolvedores";
+import Ajuda from "./pages/Ajuda/ajuda";
 
 
 
@@ -25,6 +26,10 @@ const router = createBrowserRouter([
   {
     path: "desenvolvedores",
     element: <Desenvolvedores/>
+  },
+  {
+    path: "ajuda",
+    element: <Ajuda/>
   }
 ]);
 
