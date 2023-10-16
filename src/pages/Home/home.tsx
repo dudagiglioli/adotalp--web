@@ -1,6 +1,6 @@
 import Toolbar from "../../components/Toolbar/toolbar";
 import styles from "./Home.module.scss";
-import Banner from "../../assets/banner.png";
+import Banner from "../../assets/banner2.png";
 // import AnimalDados from "../../dados/animais.json";
 import AnimalDados from "../../dados/animais";
 import Footer from "../../components/Footer/footer";
@@ -14,7 +14,11 @@ export default function Home() {
       <div className={styles.back}>
         <div className={styles.bannerBox}>
           <img src={Banner} alt="" className={styles.bannerBox__img} />
+          <div className={styles.bannerBox__text}>
+            BEM-VINDO!
+          </div>
         </div>
+     
 
         <div className={styles.adoteContainer}>
           <div className={styles.adoteBox}>
