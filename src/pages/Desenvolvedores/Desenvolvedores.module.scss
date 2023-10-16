@@ -35,6 +35,7 @@
     background-color: #2d7bf6;
     padding: 10px 10px;
     border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 .cardImg{
     height: 50%;
@@ -48,4 +49,56 @@
         border-radius: 10px;
     }
 }
+.cardText{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    padding: 0.75rem 10px;
+}
+.cardStart{
+    display: flex;
+    width: 50%;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: flex-start;
 
+    &__text{
+        font-size: 23px;
+        font-family: 'Zeyada', cursive;
+        color: white;
+        font-weight: 700;
+    }
+}
+.cardEnd{
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+}
+.icon{
+    cursor: pointer;
+}
+.icon:hover{
+    opacity: 0.7;
+}
+.icon svg{
+    color: white;
+}
+.subscribeBox{
+    width: 100%;
+    padding: 1.5rem 1.5rem;
+    background-color: #2d7bf6;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+    &__text{
+        font-family: 'Kalam', cursive;
+        color: white;
+    }
+}
