@@ -1,6 +1,7 @@
 import Toolbar from "../../components/Toolbar";
 import styles from "./Animais.module.scss";
 import TodosAnimais from "../../dados/animaisAll";
+import Footer from "../../components/Footer";
 
 
 export default function Animais() {
@@ -65,7 +66,7 @@ export default function Animais() {
         })}
       </div>
 
-        
+        <Footer/>
     </div>
   );
 }
