@@ -2,6 +2,7 @@ import Toolbar from "../../components/Toolbar";
 import styles from "./Animais.module.scss";
 import TodosAnimais from "../../dados/animaisAll";
 import dadosAll from '../../dados/animaisAll';
+import Footer from "../../components/Footer";
 
 export default function Animais() {
   return (
@@ -15,6 +16,8 @@ export default function Animais() {
           esses bichinhos peludos, faça o bem para nossos animais!
         </h2>
       </div>
+
+      <div className={styles.br}></div>
 
       <div className={styles.dispBox}>
         <h1 className={styles.dispBox__text}> Animais Disponíveis: </h1>
@@ -62,6 +65,8 @@ export default function Animais() {
           );
         })}
       </div>
+
+      <Footer/>
     </div>
   );
 }
