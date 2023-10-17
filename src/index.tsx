@@ -11,6 +11,7 @@ import Desenvolvedores from "./pages/Desenvolvedores";
 import Ajuda from "./pages/Ajuda";
 import Animais from "./pages/Animais";
 import AnimalDetails from "./pages/AnimalDetails";
+import Login from "./pages/Login";
 
 
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
     element: <Cadastro/>,
   },
   {
+    path: "login",
+    element: <Login/>
+  },
+  {
     path: "desenvolvedores",
     element: <Desenvolvedores/>
   },
@@ -37,6 +42,7 @@ const router = createBrowserRouter([
     path: "animais",
     element: <Animais/>
   },
+
 ]);
 
 const root = ReactDOM.createRoot(

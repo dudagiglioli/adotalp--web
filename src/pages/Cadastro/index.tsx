@@ -2,16 +2,17 @@ import styles from "./Cadastro.module.scss";
 import cat from "../../assets/cadastro-login/Cat.png";
 import ImageInput from "./ImageInput/imageinput";
 import Toolbar from "../../components/Toolbar";
+import { Link } from "react-router-dom";
 
 export default function Cadastro() {
   return (
     <body>
-      <Toolbar/>
+      <Toolbar />
 
       <div className={styles.back}>
         <div className={styles.container}>
           <div className={styles.formImage}>
-            <img src={cat} alt="gato" className={styles.img}/>
+            <img src={cat} alt="gato" className={styles.img} />
           </div>
 
           <div className={styles.form}>
@@ -21,9 +22,11 @@ export default function Cadastro() {
                   <h1 className={styles.h1}>BEM-VINDO!</h1>
                 </div>
                 <div className={styles.loginButton}>
-                  <button className={styles.loginButton__button}>
-                    <p className={styles.loginButton__text}>ENTRAR</p>
-                  </button>
+                  <Link to={"/login"}>
+                    <button className={styles.loginButton__button}>
+                      <p className={styles.loginButton__text}>ENTRAR</p>
+                    </button>
+                  </Link>
                 </div>
               </div>
 
@@ -130,9 +133,7 @@ export default function Cadastro() {
               <div className={styles.continueButton}>
                 <button className={styles.continueButton__btn}>CONTINUE</button>
               </div>
-
             </form>
-
           </div>
         </div>
       </div>
