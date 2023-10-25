@@ -1,4 +1,4 @@
-import React, { Children } from "react";
+import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import Home from "./pages/Home";
@@ -10,8 +10,8 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Desenvolvedores from "./pages/Desenvolvedores";
 import Ajuda from "./pages/Ajuda";
 import Animais from "./pages/Animais";
-import AnimalDetails from "./pages/AnimalDetails";
 import Login from "./pages/Login";
+import Teste from "./pages/Teste";
 
 
 
@@ -42,6 +42,10 @@ const router = createBrowserRouter([
     path: "animais",
     element: <Animais/>
   },
+  {
+    path: "teste",
+    element: <Teste/>
+  }
 
 ]);
 
@@ -56,3 +60,4 @@ root.render(
 
 
 // https://www.youtube.com/watch?v=7b42lVMdEjE  QUAQLUER DUVIDA SOBRE AS rotas
+// implement AXIOS
