@@ -12,16 +12,19 @@
     width: 100%;
     display: flex;
     flex-direction: row;
+    gap: 3%;
 }
 .left{
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
+    border-radius: 50%;
 
     &__img{
-        position: relative;
         border-radius: 50%;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, .212);
+        width: 156px;
+        background-color: #2d7bf6;
     }
 }
 .box{
@@ -86,4 +89,46 @@
 }
 .button:hover{
     opacity: 0.8;
+}
+
+@media screen and (max-width: 700px){
+    .container{
+        flex-direction: column;
+        margin: 10px;
+    }
+    .left{
+        justify-content: center;
+        align-items: center;
+        &__img{
+            width: 100px;
+        }
+    }
+    .cardTitle{
+        &__title{
+            font-size: larger;
+        }
+    }
+    .cardText{
+        padding-top: 1.5rem;
+        &__text{
+            font-size: medium;
+        }
+    }
+    .boxButton{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding-top: 2rem;
+        gap: 10px;
+    }
+    .button{
+        justify-content: center;
+        align-items: center;
+    }
+    .button a{
+        width: 70%;
+    }
+    
+    
 }

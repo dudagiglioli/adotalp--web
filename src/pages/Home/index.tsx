@@ -37,7 +37,7 @@ export default function Home() {
         <div className={styles.animais}>
           {AnimalDados.map((dados) => {
             return (
-                <div className={styles.animaisCard}>
+                <div className={styles.animaisCard} key={dados.id}>
                   <div className={styles.imgBox}>
                     <img
                       src={dados.fotoAnimal}
