@@ -1,27 +1,23 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { getAnimais } from "../../services/animais/animais";
 
-export default function Teste(){
-    const [animaisList, setAnimaisList] = useState([]);
-
-    useEffect(() =>{
-        axios
-        .get('http://localhost:8080/animal/todos')
-        .then((res) => {
-            console.log(res.data)
-            setAnimaisList(res.data)
-        })
-        .catch((err) => console.log(err))
-    }, [])
-
-
-    return (
-        <div>
-            {animaisList.map((data) => 
-                <div>{data[0]}</div>
-        )}
-        </div>
+export default function Teste() {
+    return(
+        <>
+            <h1>Teste</h1>
+            <br /><br />
+            <List />
+        </>
     );
 }
 
-// https://www.youtube.com/watch?v=q_uRFergAVo implement api
+const List = async () => {
+    const data = await getAnimais()
+
+    return (
+        <div>
+            {data.map((animal: any) => (
+                <h1 key={animal.id}>{animal.nomanimal}</h1>
+            ))}
+        </div>
+    )
+}
