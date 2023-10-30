@@ -9,7 +9,7 @@ import ErrorPage from "./pages/ErrorPage";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Desenvolvedores from "./pages/Desenvolvedores";
 import Ajuda from "./pages/Ajuda";
-import Animais from "./pages/Animais";
+import Animais from "./pages/Animals";
 import Login from "./pages/Login";
 import Teste from "./pages/Teste";
 

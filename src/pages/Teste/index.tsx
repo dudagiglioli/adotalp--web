@@ -1,23 +1,23 @@
-import { getAnimais } from "../../services/animais/animais";
+import { useEffect, useState } from "react";
+import { getAnimals } from "../../services/animals";
+import { Animal } from "../../types/animal";
 
 export default function Teste() {
+    const [data, setData] = useState<Animal[]>([])
+
+    useEffect(() => {
+        getAnimals().then((response) => {
+            setData(response)
+        })
+    }, [])
+
+    console.log(data)
+
     return(
         <>
-            <h1>Teste</h1>
-            <br /><br />
-            <List />
+            {data.map((animal) => (
+                <h1 key={animal.id}>{animal.nomeanimal}</h1>
+            ))}
         </>
     );
-}
-
-const List = async () => {
-    const data = await getAnimais()
-
-    return (
-        <div>
-            {data.map((animal: any) => (
-                <h1 key={animal.id}>{animal.nomanimal}</h1>
-            ))}
-        </div>
-    )
 }
