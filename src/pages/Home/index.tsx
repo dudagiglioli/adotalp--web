@@ -1,18 +1,15 @@
-import Toolbar from "../../components/Toolbar";
+import EmptyToolbar from "../../components/EmptyToolbar";
 import styles from "./Home.module.scss";
 import Banner from "../../assets/banner2.png";
 // import AnimalDados from "../../dados/animais.json";
 import AnimalDados from "../../dados/animais";
 import Footer from "../../components/Footer";
-import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
     <body>
-      <header>
-        <Toolbar />
-      </header>
       <div className={styles.back}>
+       <EmptyToolbar />
         <div className={styles.bannerBox}>
           <img src={Banner} alt="" className={styles.bannerBox__img} />
           <div className={styles.bannerBox__text}>

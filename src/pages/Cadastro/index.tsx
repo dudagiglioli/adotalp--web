@@ -1,13 +1,12 @@
 import styles from "./Cadastro.module.scss";
 import cat from "../../assets/cadastro-login/Cat.png";
 import ImageInput from "./ImageInput/imageinput";
-import Toolbar from "../../components/Toolbar";
 import { Link } from "react-router-dom";
 
 export default function Cadastro() {
   return (
     <body>
-      <Toolbar />
+
 
       <div className={styles.back}>
         <div className={styles.container}>

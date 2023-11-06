@@ -1,4 +1,4 @@
-import Toolbar from "../../components/Toolbar";
+
 import styles from "./Login.module.scss";
 import coruja from "../../assets/cadastro-login/coruja.png";
 import { Link } from "react-router-dom";
@@ -6,7 +6,6 @@ import { Link } from "react-router-dom";
 export default function Login() {
   return (
     <body>
-      <Toolbar />
       <div className={styles.back}>
         <div className={styles.container}>
           <div className={styles.start}>

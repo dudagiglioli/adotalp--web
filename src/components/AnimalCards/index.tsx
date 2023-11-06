@@ -32,7 +32,7 @@ export default function AnimalCards() {
             <div className={styles.imgBox__cidadeBox}>
               <div className={styles.cidadeContent}>
                 <h1 className={styles.cidadeContent__text}>
-                  
+                  {animal.cidadedoanimal.nomecidade}
                 </h1>
               </div>
             </div>

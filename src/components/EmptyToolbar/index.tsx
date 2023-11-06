@@ -5,7 +5,7 @@ import { GoPerson } from "react-icons/go";
 import { PiDogLight } from "react-icons/pi";
 import { Link } from "react-router-dom";
 
-export default function Toolbar() {
+export default function EmptyToolbar() {
   return (
     <header className={styles.toolbar}>
       <div className={styles.start}>
@@ -18,17 +18,15 @@ export default function Toolbar() {
 
       <div className={styles.end}>
         <div className={styles.end__searchBox}>
-          <button className={styles.end__searchButton}>
-            <BiSearch size={"35px"} />
-          </button>
+      
           <Link to={"/cadastro"}>
             <button className={styles.end__searchButton}>
-              <GoPerson size={"35px"} />
+              <GoPerson size={"40px"} />
             </button>
           </Link>
           <Link to={"/animais"} >
             <button className={styles.end__searchButton}>
-              <PiDogLight size={"35px"} />
+              <PiDogLight size={"40px"} />
             </button>
           </Link>
         </div>
