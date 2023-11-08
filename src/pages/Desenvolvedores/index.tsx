@@ -5,11 +5,12 @@ import Nickolas from "../../assets/desenvolvedores/nickolas.png";
 import Dudao from "../../assets/desenvolvedores/dudao.png"
 import { FaGithub } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import FullToolbar from "../../components/FullToolbar";
 
 export default function Desenvolvedores() {
     return (
         <body>
-
+            <FullToolbar/>
             <div className={styles.back}>
 
                 <div className={styles.titleBox}>

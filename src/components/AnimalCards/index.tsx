@@ -20,7 +20,8 @@ export default function AnimalCards() {
 
   return (
     <>
-      {data.map((animal) => (
+      {data.length > 0 ?  (   
+        data.map((animal) => (
         <div className={styles.animaisCard} key={animal.id}>
           <div className={styles.imgBox}>
             <img
@@ -59,7 +60,12 @@ export default function AnimalCards() {
                 </div>
           </div>
         </div>
-      ))}
+      ))
+      ) : (
+        <p>Não há animais disponíveis</p>
+      )
+    }
+
     </>
   );
 }

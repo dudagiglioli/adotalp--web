@@ -2,10 +2,12 @@
 import styles from "./Login.module.scss";
 import coruja from "../../assets/cadastro-login/coruja.png";
 import { Link } from "react-router-dom";
+import FullToolbar from "../../components/FullToolbar";
 
 export default function Login() {
   return (
     <body>
+      <FullToolbar/>
       <div className={styles.back}>
         <div className={styles.container}>
           <div className={styles.start}>

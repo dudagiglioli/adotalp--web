@@ -1,6 +1,6 @@
 import EmptyToolbar from "../../components/EmptyToolbar";
 import styles from "./Home.module.scss";
-import Banner from "../../assets/banner2.png";
+import Banner from "../../assets/banner.png";
 // import AnimalDados from "../../dados/animais.json";
 import AnimalDados from "../../dados/animais";
 import Footer from "../../components/Footer";

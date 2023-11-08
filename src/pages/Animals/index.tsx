@@ -3,19 +3,21 @@ import styles from "./Animais.module.scss";
 import TodosAnimais from "../../dados/animaisAll";
 import Footer from "../../components/Footer";
 import AnimalCards from "../../components/AnimalCards";
+import FullToolbar from "../../components/FullToolbar";
 
 
 export default function Animais() {
   return (
     <div className={styles.back}>
+       <FullToolbar/>
 
       <div className={styles.ongBox}>
-        <h1 className={styles.ongBox__title}>VAMOS AJUDAR NOSSOS BICHINHOS!</h1>
-        <h2 className={styles.ongBox__subtitle}>
+        <span className={styles.ongBox__title}>VAMOS AJUDAR NOSSOS BICHINHOS!</span>
+        <span className={styles.ongBox__subtitle}>
           Caso você veja algum animal abandonado entre em contato imediatamente
           com um abrigo de animais local ou um grupo de resgate, vamos ajudar
           esses bichinhos peludos, faça o bem para nossos animais!
-        </h2>
+        </span>
       </div>
 
       <div className={styles.br}></div>
