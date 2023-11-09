@@ -12,6 +12,7 @@ import Ajuda from "./pages/Ajuda";
 import Animais from "./pages/Animals";
 import Login from "./pages/Login";
 import Teste from "./pages/Teste";
+import Buscador from "./components/Buscador/bucador";
 
 
 

@@ -5,7 +5,12 @@ import nescau from "../../assets/animais/nescau.jpg";
 
 import styles from "./AnimalCards.module.scss";
 
-export default function AnimalCards() {
+type PropsAnimalCards = {
+  valor: string
+}
+
+export default function AnimalCards({valor}: PropsAnimalCards ) {
+  
   /* ---------------------------------------------------------------- */
   const [data, setData] = useState<Animal[]>([]);
 

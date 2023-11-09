@@ -4,9 +4,15 @@ import TodosAnimais from "../../dados/animaisAll";
 import Footer from "../../components/Footer";
 import AnimalCards from "../../components/AnimalCards";
 import FullToolbar from "../../components/FullToolbar";
+import Buscador from "../../components/Buscador/bucador";
+import { useState } from "react";
 
 
 export default function Animais() {
+
+  /**/
+  const {valorBuscador, setValorBuscador} = useState("")
+
   return (
     <div className={styles.back}>
        <FullToolbar/>
@@ -22,8 +28,8 @@ export default function Animais() {
 
       <div className={styles.br}></div>
 
-      <div className={styles.dispBox}>
-        <h1 className={styles.dispBox__text}> Animais Disponíveis: </h1>
+      <div className={styles.searchBox}>
+        <Buscador valorBuscador={setValorBuscador}/>
       </div>
 
       <div className={styles.animais}>
